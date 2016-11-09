@@ -1,5 +1,8 @@
 package com.searchapp.modle;
 
+import com.google.gson.annotations.Expose;
+import com.google.gson.annotations.SerializedName;
+
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
@@ -9,9 +12,13 @@ import java.util.List;
  */
 
 public class RestResponse implements Serializable {
+    @SerializedName("messages")
+    @Expose
+    List<String> messages = new ArrayList<String>();
 
-    private List<String> messages = new ArrayList<String>();
-    private List<Result> result = new ArrayList<Result>();
+    @SerializedName("result")
+    @Expose
+    List<Result> result = new ArrayList<Result>();
 
 
     public List<String> getMessages() {

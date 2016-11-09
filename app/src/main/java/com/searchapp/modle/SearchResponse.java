@@ -1,5 +1,8 @@
 package com.searchapp.modle;
 
+import com.google.gson.annotations.Expose;
+import com.google.gson.annotations.SerializedName;
+
 import java.io.Serializable;
 
 /**
@@ -7,8 +10,9 @@ import java.io.Serializable;
  */
 
 public class SearchResponse implements Serializable{
-
-    private RestResponse restResponse;
+    @SerializedName("RestResponse")
+    @Expose
+    RestResponse restResponse;
 
     public RestResponse getRestResponse() {
         return restResponse;

@@ -39,6 +39,7 @@ public class MainActivity extends AppCompatActivity implements ISearchView{
         searchPresenter = new SearchPresenter(this, this);
 
         searchView.setQueryHint("search your location");
+        searchView.onActionViewExpanded();
 
 
         //*** setOnQueryTextFocusChangeListener ***

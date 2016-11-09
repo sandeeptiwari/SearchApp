@@ -1,5 +1,8 @@
 package com.searchapp.modle;
 
+import com.google.gson.annotations.Expose;
+import com.google.gson.annotations.SerializedName;
+
 import java.io.Serializable;
 
 /**
@@ -7,13 +10,24 @@ import java.io.Serializable;
  */
 
 public class Result implements Serializable {
-
-    private String country;
-    private String name;
-    private String abbr;
-    private String area;
-    private String largestCity;
-    private String capital;
+    @SerializedName("country")
+    @Expose
+    String country;
+    @SerializedName("name")
+    @Expose
+    String name;
+    @SerializedName("abbr")
+    @Expose
+    String abbr;
+    @SerializedName("area")
+    @Expose
+    String area;
+    @SerializedName("largestCity")
+    @Expose
+    String largestCity;
+    @SerializedName("capital")
+    @Expose
+    String capital;
 
     public String getCountry() {
         return country;

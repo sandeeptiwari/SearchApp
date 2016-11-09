@@ -53,10 +53,9 @@ public class SearchInteracter implements ISearchInteracter {
                         RestResponse restResponse = response.body().getRestResponse();
                         List<Result> results = restResponse.getResult();
                         SearchInteracter.this.listener.onSuccess(results);
-                    } else {
-
                     }
                 } catch (Exception e) {
+                    SearchInteracter.this.listener.onError();
                 }
             }
 
